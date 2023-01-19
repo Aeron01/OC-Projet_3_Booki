@@ -1,18 +1,32 @@
-/* * {
+* {
   margin: 0;
-  box-sizing: border-box;
-  height: 992px;
-  width: 1400px;
-}*/
+}
 
 body {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  background-color: #F0F2F6;
   box-sizing: border-box;
+  min-width: 992px;
+  max-width: 1400px;
 }
 
-h1 {
+.logo {
+  width: 61px;
+  height: 29px;
+  margin-top: 44px;
+  margin-left: 55px;
+  /*margin-right:1324px;*/
+}
+
+
+nav {
+  margin-top: 48px;
+  /*margin-left: 982px;*/
+  margin-right: 77px;
+  /*margin-bottom: 1811px;*/
+}
+
+/*h1 {
   font-weight:700;
   font-size: 22px;
   line-height: 26px;
@@ -27,8 +41,8 @@ h2 {
 p {
   font-size: 14px;
   line-height: 16px;
-  /*color:black;*/
-}
+  color:black;
+}*/
 
 a {
   text-decoration: none;
@@ -61,10 +75,14 @@ a {
   align-items: center;
   padding: 15px 16px;
   gap: 10px;
-  position: absolute;
 }*/
 
 button {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 16px;
+    gap:10px;
   width: 128px;
   height: 48px; 
   box-sizing: border-box;
@@ -84,16 +102,33 @@ button {
   background: #DEEBFF;
 }
 
+i[class="fas fa-location-dot"] {
+  width: 50px;
+  height: 19px;
+  left: 55px;
+  right: 84.94%;
+  background: #F2F2F2;
+  border: 1px solid #F2F2F2;
+  border-radius: 15px 0px 0px 15px;
+}
+
 form {
   /*position: absolute;*/
+  display: flex;
+    flex-direction: row;
   width: 332px;
   height: 49px;
+  left: 55px;
+  top: 199px;
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   border-radius: 15px;
 }
 
 .recherche::placeholder {
+  display: flex;
+    flex-direction: row;
+    left:105px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -102,10 +137,16 @@ form {
 }
 
 input {
-  width: 132px;
+  display: flex;
+  flex-direction: row;
+  
+
+  width: Hug(132px);
   height: 49px;
   top: 200px;
   left: 341px;
+  padding: 15px, 16px, 15px, 16px;
+  gap: 10px;
   border: 1px solid #F2F2F2;
   border-radius: 0px, 15px, 15px, 0px;
 }
@@ -137,10 +178,73 @@ input {
 .ellipse {
   box-sizing: border-box;
   border: 1px solid #D9D9D9;
-  border-radius: 6px,6px,6px,6px;
+  border-radius: 12px;
+  size: 2px;
   /*position:absolute;*/
   width: 24px;
   height: 24px;
   left: 0px;
   top: 0px;
+}
+
+/*---------------- Partie recherche hebergement ----------------------*/
+
+.sectionrecher_heber {
+  /*position: absolute;*/
+  /*display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 510px;
+  width: 880px;
+  height: 626px;*/
+  border-radius: 20px;
+  background-color:#F2F2F2;
+}
+
+/*---------------- Partie les plus populaire ----------------------*/
+
+.sectionplus_pop {
+  /*position: absolute;*/
+  /*display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  margin-left: 970px;
+  margin-right: 50px;
+  width: 420px;
+  height: 625px;*/
+  border-radius: 20px;
+  background-color: #F2F2F2;
+}
+
+/*---------------- Partie activité ----------------------*/
+
+.section_activité {
+  /*position: absolute;*/
+  /*display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 1112px;
+  margin-right: 50px;
+  width: 1337px;
+  height: 493px;*/
+  border-radius: 20px;
+  background-color: #F2F2F2;
+}
+
+/*---------------- Partie footer ----------------------*/
+
+footer {
+  /*position: absolute;*/
+  /*display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  text-align: left;
+  margin-left: 48px;
+  width: 1339px;
+  height: 225px;*/
+  background-color: #F2F2F2;
 }

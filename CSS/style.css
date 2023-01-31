@@ -5,13 +5,40 @@
   --text-card-and-search-color-white: #F2F2F2; /* couleur blanche */
 }
 
-body {
-  margin: 0; 
+* {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
+}
+
+body { 
   max-width: 1400px;
   margin: auto;
+  color: #000000;
 }
+
+main {
+  margin: auto;
+  padding: 30px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
 
 
 /*------ Partie icones ------*/
@@ -28,28 +55,39 @@ body {
   font-weight: 800;
 }
 
-/*-------- Logo & navigation ------*/
-
+/*-------- Logo ------*/
 header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  width: 61px;
-  height: 29px;
+.logo img{
+  margin-top: 44px;
+  height: 19px;
 }
 
 /*---------- Navigation --------*/
 
-
-
+nav {
+  display: flex;
+  gap:40px;
+}
 
 a {
   text-decoration: none;
   color: #000000;
+}
+
+.lien_nav {
+  margin-top: 44px;
+  color: black;
+  text-decoration: none;
+}
+
+.lien_nav:hover {
+  color: var(--icones-color);
+  box-sizing:border-box;
+  border-top: 2px solid var(--icones-color);
 }
 
 .afficherplus {
@@ -58,82 +96,58 @@ a {
   line-height: 21px;
 }
 
-.lien_nav {
-  color: black;
-  text-decoration: none;
-}
-
-.lien_nav:hover {
-  color: var(--icones-color);
-  box-sizing: border-box;
-  border-top: 2px solid var(--icones-color);
-}
-
 /*------ Barre de recherche ------*/
 
-
 .fa-location-dot {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   height: 50px;
-  color: #000000;
-  background: var(--text-card-and-search-color-white);
-  border: 1px solid /*var(--text-card-and-search-color-white);*/ red;
-  border-radius: 15px 0px 0px 15px;
+  background: var(--grey-bkgrnd-photos-and-stars);  
+  border-radius: 15px 0 0 15px;
+  padding: 15px;
 }
 
-form {
-  display: inline-flex;
-  
-  width: 332px;
+.recherche-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
   height: 50px;
-  background: #FFFFFF;
-  border: 1px solid /*var(--text-card-and-search-color-white);*/;
+  border: 1px solid var(--grey-bkgrnd-photos-and-stars);
+  border-right: none;
   border-radius: 15px;
 }
 
-.recherche::placeholder {
-  font-family: 'Raleway';
-  font-size: 18px;
-  font-weight:bolder;
-  line-height: 21px;
+::placeholder {
   color: #000000;
 }
 
-input {
-  display: inline-flex;
-  width: 132px;
-  height: 50px;
-  padding-left: 10px;
-  border: 1px solid /*var(--text-card-and-search-color-white);*/ red;
-}
-
-.buttonsubmit {
-  display: inline-flex;
-  justify-items: center;
-  align-items: center;
-  width: 159px;
-  height: 50px;
-  /*left: 408px;
-  top: 304px;*/
-  background: var(--icones-color);
-  border: 1px solid var(--icones-color);
-  border-radius: 0px 15px 15px 0px;
-}
-
-
-.envoi {
-  display: inline-flex;
-  align-items: center;
-  height: 50px;
-  font-weight: 700;
+.recherche-form input {
+  font-weight: bold;
+  width: 304px;
+  height: 48px;
+  font-family: 'Raleway';
   font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  background-color: var(--icones-color);
+  padding-left: 15px;
+  border: none;
+}
+
+.recherche-form button{
+  width: 120px;
+  height: 50px;
+  background: var(--icones-color);  
+  border-radius: 0 15px 15px 0;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.recherche-bouton-txt {
   color: var(--text-card-and-search-color-white);
+}
+
+.recherche-form button .fa-magnifying-glass {
+  color: var(--text-card-and-search-color-white);
+  display: none;
 }
 
 /*------ Mediaquery icone loop mobile ------*/
@@ -167,25 +181,30 @@ input {
 }
 
 /*--------- Information --------*/
-.ellipse {
-  display: inline-flex;
-  border: 1px solid var(--grey-bkgrnd-photos-and-stars);
-  border-radius: 12px;
-  width: 24px;
-  height: 24px;
-  left: 0px;
-  top: 0px;
+.info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconeinfo {
+  border: 2px solid var(--grey-bkgrnd-photos-and-stars);
+  border-radius: 50px;
+  background-color:#fff;
+  padding-left: 8px;
+  width: 25px;
+  height: 20px;
 }
 
 /*---------------- Partie recherche hebergement ----------------------*/
 
 .sectionrecher_heber {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 246px 246px 246px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap:10px;
   border-radius: 20px;
-  background-color: var(--text-card-and-search-color-white);
+  background-color: var(--grey-bkgrnd-photos-and-stars);
 }
 .card_height {
   height: 200px;
@@ -195,10 +214,14 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px 20px 0 0;
 }
 
 .card_1 {
-
+  width: 246px;
+  height: 124px;
+  border: 5px solid #fff;
+  border-radius: 20px 20px 0 0;
 }
 
 /*---------------- Partie les plus populaire ----------------------*/

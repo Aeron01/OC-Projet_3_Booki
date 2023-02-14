@@ -271,18 +271,19 @@ a {
 }
 /*---------------- Partie activité ----------------------*/
 
-.section_activiter {
+.conteneur_activiter {
   display: flex;
   margin-top: 40px;
   border-radius: 20px;
+  margin-bottom: 40px;
 }
 
-.conteneur-activiter {
+.section_activiter {
   display: flex;
-  gap: 43px;
+  gap: 30px;
 }
 
-.conteneur-activiter h2 {
+.section_activiter h2 {
   margin-bottom: 20px;
 }
 
@@ -303,11 +304,61 @@ footer  {
   gap: 20px;
 }
 
-/*------ Media query et icone loop mobile ------*/
+/*------ Media query mobile ------*/
 
 @media screen and (max-width: 767px) {
+
+header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .logo {
+    padding-top: 20px;
+  }
+
+  .lien_nav {
+    border-top: none;
+    border-bottom: 3px solid var(--bkgrnd-color-border-btn-filter);
+  }
+
+  .lien_nav:hover {
+    border-top: none;
+    border-bottom: 3px solid var(--icones-color);
+  }
+
+  .description {
+    margin-top: 25px;
+    font-size: 22px;
+    text-align: justify;
+  }
+  
+  .filtres {
+    flex-wrap: wrap;
+  }
+
+  .recherche-form button {
+    width: 50px;
+  }
+
+  .recherche-form button .fa-magnifying-glass {
+    color: var(--text-card-and-search-color-white);
+  }
+  
+  .recherche-bouton-txt {
+    color: var(--text-card-and-search-color-white);
+    display: none;
+  }
+  
+  .cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
   .conteneur-hotel {
     flex-direction: column-reverse;
+    flex-wrap: wrap;
   }
 
   .sectionplus_pop {
@@ -322,35 +373,11 @@ footer  {
     width: 30%;
   }
 
-  .recherche-form button .fa-magnifying-glass {
-    color: var(--text-card-and-search-color-white);
-  }
 
-  .recherche-bouton-txt {
-    color: var(--text-card-and-search-color-white);
-    display: none;
-  }
-
-  .filtres {
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .lien_nav {
-    border-top: none;
-    border-bottom: 3px solid var(--bkgrnd-color-border-btn-filter);
-  }
-
-  .lien_nav:hover {
-    border-top: none;
-    border-bottom: 3px solid var(--icones-color);
-  }
 
 }
+
+/*------ Media query Tablette & Desktop ------*/
 
 @media screen and (min-width: 768px) {
   .recherche-form button .fa-magnifying-glass {

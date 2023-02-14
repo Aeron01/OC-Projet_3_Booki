@@ -1,9 +1,11 @@
 /* variables */
 :root {
   --icones-color: #0065FC; /* couleur bleu des icones */
-  --blue-sky-bkgrnd-btn-filter: #DEEBFF; /* couleur bleu ciel pour certaine partie */
-  --grey-bkgrnd-default-btn-filter: #D9D9D9; /* couleur des bouton filtre par defaut */
-  --grey-bkgrnd-photos-and-stars: #D9D9D9; /* couleur de fond grise pour les photos et certaine étoiles*/
+  --bkgrnd-color-hover-btn-filter: #DEEBFF; /* couleur bleu ciel  en survole pour les boutons du filtre */
+  --bkgrnd-color-border-btn-filter: #D9D9D9; /* couleur des bordures des boutons du filtre */
+  --bkgrnd-default-color-btn-filter: #FFFFFF; /* couleur des bouton filtre par defaut */
+  --bkgrnd-color-for-host-and-popular: #D9D9D9; /* couleur de fond grise pour les photos */
+  --bkgrnd-color-not-obtain-stars-and-info-icon: #D9D9D9; /* couleur de fond grise des étoiles non obtenu et l'icone d'information */
   --text-card-and-search-color-white: #F2F2F2; /* couleur blanche */
 }
 
@@ -18,7 +20,7 @@
 
 body { 
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 30px;
   color: #000000;
 }
 
@@ -39,7 +41,7 @@ h3 {  font-size: 14px;  }
 }
 
 .star_grey {
-  color: var(--grey-bkgrnd-photos-and-stars);
+  color: var(--bkgrnd-color-not-obtain-stars-and-info-icon);
 }
 
 
@@ -54,7 +56,7 @@ header {
 
 .logo img{
   height: 19px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 /*---------- Navigation --------*/
@@ -100,7 +102,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--grey-bkgrnd-photos-and-stars);
+  background: var(--bkgrnd-color-not-obtain-stars-and-info-icon);
   border-radius: 15px 0 0 15px;
   width: 100%;
   width: 50px;
@@ -142,10 +144,6 @@ a {
   color: var(--text-card-and-search-color-white);
 }
 
-.recherche-form button .fa-magnifying-glass {
-  color: var(--text-card-and-search-color-white);
-  display: none;
-}
 
 /*---------- Filtre ---------*/
 
@@ -158,7 +156,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 15px 16px;
-  gap: 40px;
+  gap: 20px;
 }
 
 .filtres-btn { 
@@ -168,8 +166,8 @@ a {
   gap: 0 10px;
   width: auto;
   height: 50px;
-  background: var(--grey-bkgrnd-default-btn-filter);
-  border: 2px solid var(--grey-bkgrnd-photos-and-stars);
+  background: var(--bkgrnd-default-color-btn-filter);
+  border: 2px solid var(--bkgrnd-color-border-btn-filter);
   border-radius: 25px;
   font-weight: 700;
   font-size: 17px;
@@ -177,7 +175,7 @@ a {
 }
 
 .filtres-btn:hover {
-  background: var(--blue-sky-bkgrnd-btn-filter);
+  background: var(--bkgrnd-color-hover-btn-filter);
 }
 
 /*--------- Information --------*/
@@ -188,7 +186,7 @@ a {
 }
 
 .info .iconeinfo {
-  border: 2px solid var(--grey-bkgrnd-photos-and-stars);
+  border: 2px solid var(--bkgrnd-color-not-obtain-stars-and-info-icon);
   border-radius: 50%;
   background-color:#fff;
   width: 16px;
@@ -307,7 +305,7 @@ footer  {
 
 /*------ Media query et icone loop mobile ------*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   .conteneur-hotel {
     flex-direction: column-reverse;
   }
@@ -324,6 +322,40 @@ footer  {
     width: 30%;
   }
 
+  .recherche-form button .fa-magnifying-glass {
+    color: var(--text-card-and-search-color-white);
+  }
+
+  .recherche-bouton-txt {
+    color: var(--text-card-and-search-color-white);
+    display: none;
+  }
+
+  .filtres {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lien_nav {
+    border-top: none;
+    border-bottom: 3px solid var(--bkgrnd-color-border-btn-filter);
+  }
+
+  .lien_nav:hover {
+    border-top: none;
+    border-bottom: 3px solid var(--icones-color);
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .recherche-form button .fa-magnifying-glass {
+    display: none;
+  }
 
 }
 

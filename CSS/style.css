@@ -20,8 +20,26 @@
 
 body { 
   max-width: 1400px;
-  margin: 0 30px;
+  margin: 0 auto;
   color: #000000;
+}
+
+@media screen and (max-width: 1500px) {
+  .body {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .body {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    margin: 0;
+  }
 }
 
 header, main, footer {
@@ -64,6 +82,13 @@ nav {
   display: flex;
   height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+}
+
 
 a {
   text-decoration: none;
@@ -204,7 +229,7 @@ a {
 
 .sectionrecher_heber {
   display: flex;
-  width: 880px;
+  width: 100%;
   flex-direction: column;
   gap:10px;
   border-radius: 20px;
@@ -227,7 +252,7 @@ a {
   box-shadow: 1px 5px 15px var(--bkgrnd-color-border-btn-filter);
   border-radius: 20px;
   background-color: #fff;
-  padding: 7px;
+  padding: 5px;
 }
 
 .card p {
@@ -238,7 +263,7 @@ a {
   width: 100%;
   height: 124px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 
 
@@ -250,8 +275,10 @@ a {
 /*---------------- Partie les plus populaire ----------------------*/
 
 .sectionplus_pop {
-  width: 420px;
-  padding: 25px;
+  min-width: 420px;
+  max-width: 420px;
+  height: 625px;
+  padding: 37px;
   border-radius: 20px;
   background-color: var(--text-card-and-search-color-white);
 }
@@ -268,6 +295,29 @@ a {
 
 .sectionplus_pop .cards .card {
   width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 0 20px;
+}
+
+.sectionplus_pop .cards .card img {
+  width: 137px;
+  min-width: 137px;
+  height: 134px;
+  border-radius: 16px 0 0 16px;
+
+}
+
+.cards .description {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: start;
 }
 
 /*---------------- Partie activité ----------------------*/
@@ -323,12 +373,16 @@ footer  {
 
 /*------ Media query mobile ------*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
 header {
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
+    height: 130px;
+  }
+
+  nav {
+    width: 100%;
   }
 
   .logo {
@@ -338,6 +392,7 @@ header {
   .lien_nav {
     border-top: none;
     border-bottom: 3px solid var(--bkgrnd-color-border-btn-filter);
+    width: 50%;
   }
 
   .lien_nav:hover {

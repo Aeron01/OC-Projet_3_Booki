@@ -29,9 +29,8 @@ header, main, footer {
 }
 
 h1, h2, h3 {  font-weight: 700; }
-h1 {  font-size: 22px;  }
-h2 {  font-size: 16px;  }
-h3 {  font-size: 14px;  }
+h1, h2 {  font-size: 22px;  }
+h3 {  font-size: 16px;  }
 
 
 
@@ -225,6 +224,7 @@ a {
 .card {
   width: 30%;
   height: auto;
+  box-shadow: 1px 5px 15px var(--bkgrnd-color-border-btn-filter);
   border-radius: 20px;
   background-color: #fff;
   padding: 7px;
@@ -269,22 +269,36 @@ a {
 .sectionplus_pop .cards .card {
   width: 100%;
 }
+
 /*---------------- Partie activité ----------------------*/
 
 .conteneur_activiter {
   display: flex;
+  flex-direction: row;
   margin-top: 40px;
   border-radius: 20px;
   margin-bottom: 40px;
 }
 
-.section_activiter {
-  display: flex;
+.conteneur_activiter .card {
+  border: 2px solid red;
+  width: 335px;
+}
+
+.conteneur_activiter .card img {
+  width: 315px;
+  height: 420px;
   gap: 30px;
 }
 
-.section_activiter h2 {
+.conteneur_activiter h2 {
   margin-bottom: 20px;
+}
+
+.conteneur_activiter h3 {
+  height: 56px;
+  font-size: 16px;
+  
 }
 
 /*---------------- Partie footer ----------------------*/
@@ -294,6 +308,8 @@ footer  {
   flex-direction: row;
   justify-content: space-around;
   background-color: var(--text-card-and-search-color-white);
+  height: 225px;
+  align-items: center;
 }
 
 
@@ -301,7 +317,8 @@ footer  {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  gap: 20px;
+  gap: 15px;
+  font-size: 16px;
 }
 
 /*------ Media query mobile ------*/
@@ -373,7 +390,9 @@ header {
     width: 30%;
   }
 
-
+  footer {
+    flex-direction: column;
+  }
 
 }
 

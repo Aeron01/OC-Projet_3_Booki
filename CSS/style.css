@@ -118,6 +118,13 @@ a {
   width: 25px;
 }
 
+.recherche {
+  margin-bottom: 20px;
+}
+
+.recherche .description h1 {
+  margin-bottom: 10px;
+}
 
 .recherche-form-txt {
   font-weight: bold;
@@ -152,15 +159,18 @@ a {
 
 
 /*---------- Filtre ---------*/
+.conteneur-filtres_et_info {
+  margin-bottom: 20px;
+}
 
 .conteneur-filtres {
-  margin-bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filtres {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 15px 16px;
   gap: 20px;
 }
@@ -413,11 +423,7 @@ header {
     font-size: 22px;
     text-align: justify;
   }
-  
-  .filtres {
-    flex-wrap: wrap;
-  }
-
+    
   .recherche-form button {
     width: 50px;
   }
@@ -431,6 +437,30 @@ header {
     display: none;
   }
   
+  .conteneur-filtres {
+    display: block;
+  }
+
+  .conteneur-filtres h2 {
+    font-size: 18px;
+  }
+  
+  .filtres {
+    min-width: 372px;
+    max-width: 372px;
+    min-height: 150px;
+    max-height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .filtres-btn {
+    min-width: 160px;
+    max-width: 160px;
+    font-size: 11px;
+  }
+
   .cards {
     flex-direction: column;
     flex-wrap: wrap;

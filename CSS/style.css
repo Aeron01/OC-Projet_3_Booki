@@ -22,6 +22,7 @@ body {
   max-width: 1400px;
   margin: 0 50px;
   color: #000000;
+  padding: 0 20px;
 }
 
 header, main, footer {
@@ -167,11 +168,12 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 43px;
 }
 
-.conteneur-filtres h2 {
+/*.conteneur-filtres h2 {
   padding: 0 20px;
-}
+}*/
 
 .filtres {
   display: inline-flex;
@@ -203,7 +205,8 @@ a {
 .info {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 17px;
+  margin-bottom: 20px;
 }
 
 .info .iconeinfo {
@@ -427,12 +430,12 @@ header {
     margin-top: 25px;
     font-size: 22px;
     text-align: justify;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
   }
     
-  .recherche-form {
+  /*.recherche-form {
     padding: 0 20px;
-  }
+  }*/
 
   .recherche-form-txt {
     width: 254px;
@@ -468,6 +471,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 14px;
   }
 
   .filtres-btn {
@@ -476,10 +480,9 @@ header {
     font-size: 11px;
   }
 
-  .info {
-    padding: 20px 20px;
-    
-  }
+  /*.info {  
+    padding: 20px 0;
+  }*/
 
   .cards {
     flex-direction: column;
@@ -493,6 +496,7 @@ header {
 
   .sectionplus_pop {
     width: 375px;
+    border-radius: 0;
   }
 
   .sectionplus_pop .cards {

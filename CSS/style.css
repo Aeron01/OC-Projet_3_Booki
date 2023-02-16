@@ -20,7 +20,7 @@
 
 body { 
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 50px;
   color: #000000;
 }
 
@@ -169,8 +169,13 @@ a {
   align-items: center;
 }
 
+.conteneur-filtres h2 {
+  padding: 0 20px;
+}
+
 .filtres {
   display: inline-flex;
+  flex-wrap: wrap;
   padding: 15px 16px;
   gap: 20px;
 }
@@ -371,20 +376,20 @@ footer  {
 }
 /*------ Media query marging responsive ------*/
 
-@media screen and (max-width: 1400px) {
+/*@media screen and (max-width: 1400px) {
   .body {
     margin: 0 50px;
   }
-}
+}*/
 
 @media screen and (max-width: 992px) {
-  .body {
+  body {
     margin: 0 72px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .body {
+  body {
     margin: 0;
   }
 }
@@ -422,8 +427,17 @@ header {
     margin-top: 25px;
     font-size: 22px;
     text-align: justify;
+    padding: 0 20px;
   }
     
+  .recherche-form {
+    padding: 0 20px;
+  }
+
+  .recherche-form-txt {
+    width: 254px;
+  }
+
   .recherche-form button {
     width: 50px;
   }
@@ -443,6 +457,7 @@ header {
 
   .conteneur-filtres h2 {
     font-size: 18px;
+    padding: 0 20px;
   }
   
   .filtres {
@@ -459,6 +474,11 @@ header {
     min-width: 160px;
     max-width: 160px;
     font-size: 11px;
+  }
+
+  .info {
+    padding: 20px 20px;
+    
   }
 
   .cards {
@@ -483,21 +503,34 @@ header {
     width: 30%;
   }
 
+  .sectionrecher_heber {
+    background-color: white;
+  }
+
   .sectionrecher_heber .card {
-    width: auto;
+    width: 335px;
+  }
+
+  .afficherplus {
+    display: none;
+  }
+
+  .conteneur_activiter {
+    padding: 0 20px;
+    justify-content: normal;
   }
 
   .conteneur_activiter .cards {
-    /*max-width: 335px;*/
     height: auto;
   }
 
   .conteneur_activiter .card {
-    min-width: 335px;
+    width: 335px;
     height: 190px;
   }
 
   .conteneur_activiter .card img {
+    width: 100%;
     height: 114px;
   }
 
@@ -524,6 +557,10 @@ header {
   .conteneur-hotel {
     flex-direction: column;
     width: 100%;
+  }
+
+  .sectionrecher_heber .card {
+    max-width: 246px;
   }
 
   .sectionplus_pop {

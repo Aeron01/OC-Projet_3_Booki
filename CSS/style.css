@@ -318,8 +318,7 @@ a {
 /*---------------- Partie activité ----------------------*/
 
 .conteneur_activiter {
-  display: flex;
-  flex-direction: row;
+  display: block;
   margin-top: 40px;
   border-radius: 20px;
   margin-bottom: 40px;
@@ -354,12 +353,12 @@ a {
 
 footer  {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   background-color: var(--text-card-and-search-color-white);
   max-width: 1300px;
   height: 225px;
   align-items: center;
+  margin: 0;
 }
 
 

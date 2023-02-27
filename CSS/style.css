@@ -580,12 +580,19 @@ footer  {
 	}
 
 	.sectionplus_pop .cards .card h3,
-	.sectionplus_pop .cards .card p {
-		font-size: clamp(11px, 2.25vw, 20px);
-	}
+    .sectionrecher_heber .cards .card h3 {
+        font-size: clamp(16px, 2.25vw, 20px)
+    }
 
-	.sectionplus_pop .cards .card span {
-		font-size: clamp(11px, 2.25vw, 20px)
+    .sectionplus_pop .cards .card p,
+    .sectionrecher_heber .cards .card p {
+        font-size: clamp(14px, 2.25vw, 20px)
+    }
+
+
+    .sectionplus_pop .cards .card span,
+    .sectionrecher_heber .cards .card span {
+		font-size: clamp(12px, 2.25vw, 19px)
 	}
 
 	.sectionrecher_heber {

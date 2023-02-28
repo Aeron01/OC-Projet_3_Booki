@@ -217,8 +217,8 @@ a {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 20px;
 	width: 100%;
+    gap: 20px;
 }
 
 /*--- Card ---*/
@@ -311,15 +311,20 @@ a {
 	align-items: center;
 }
 
+.conteneur_activiter .cards {
+    gap: unset;
+    justify-content: space-between;
+}
+
 .conteneur_activiter .card {
-	width: 302px;
+	width: 23.23%;
 	padding: 0;
+    max-height: 444px;
 }
 
 .conteneur_activiter .card img {
-	width: 302px;
-	height: 420px;
-	gap: 30px;
+	width: 100%;
+	height: clamp(211px, 30vw, 389px);
 }
 
 .conteneur_activiter h2 {
@@ -328,7 +333,7 @@ a {
 
 .conteneur_activiter h3 {
 	height: 56px;
-	font-size: 16px;
+	font-size: clamp(12px, 1vw, 16px);
 	display: flex;
 	align-items: center;
 	padding: 19px 36px 21px 20px;
@@ -385,10 +390,10 @@ footer  {
 
 	.sectionrecher_heber .cards .card,
 	.sectionplus_pop .cards .card {
-		max-width: 31.9%;
-		width: 100%;
-		min-width: 252px;
+		justify-content: space-between;
 		gap: 0 10px;
+        flex: 1;
+        min-width: 220px;
 	}
 
 	.sectionplus_pop .cards .card h3 {
@@ -403,20 +408,6 @@ footer  {
 	.sectionplus_pop .cards .card img {
 		width: 106px;
 		min-width: 106px;
-	}
-
-	.conteneur_activiter .card {
-		min-width: 182px;
-		max-width: 182px;
-		height: 267px;
-		gap: 50px;
-		padding: 0;
-	}
-
-	.conteneur_activiter .card img {
-		min-width: 182px;
-		max-width: 182px;
-		height: 211px;
 	}
 
 	footer {
@@ -477,7 +468,7 @@ footer  {
 	}
 
 	.recherche-form-txt {
-		width: 220px;
+		width: 100%;
 	}
 
 	.recherche-form button {
@@ -503,9 +494,6 @@ footer  {
 	}
 	
 	.filtres {
-		/*min-width: 352px;
-		width: 352px;
-		max-height: 150px;*/
 		min-height: 150px;
 		justify-content: center;
 		align-items: center;
@@ -516,10 +504,10 @@ footer  {
 
 	.filtres-btn {
 		min-width: 160px;
-		width: 160px;
+		width: 48%;
 		font-size: clamp(10.8px, 2.25vw, 20px);
 		justify-content: left;
-		gap: 5px;
+		gap: 4%;
 	}
 
 	.filtres-btn .svg-inline--fa {
@@ -551,8 +539,9 @@ footer  {
 
 	.sectionplus_pop .description {
 		margin: 0;
-		width: 197px;
-		text-align: left;
+		width: auto;
+        flex: 1;
+        height: 134px;
 	}
 	
 	.sectionplus_pop .description h3 {
@@ -576,7 +565,7 @@ footer  {
 	.sectionplus_pop .cards .card img {
 		min-width: unset;
 		width: 30%;
-		height: 100%;
+		
 	}
 
 	.sectionplus_pop .cards .card h3,
@@ -601,6 +590,12 @@ footer  {
 		width: 100%;
 	}
 
+    .conteneur_activiter .cards {
+        min-width: 252px;
+        gap: 24px;
+    }
+
+
 	.sectionrecher_heber .card {
 		width: 335px;
 	}
@@ -623,6 +618,10 @@ footer  {
 		width: 100%;
 		height: 114px;
 	}
+
+    .conteneur_activiter h3 {
+        font-size: 16px
+    }
 
 	footer {
 		flex-direction: column;

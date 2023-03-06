@@ -6,7 +6,7 @@
 	--bkgrnd-default-color-btn-filter: #FFFFFF; /* couleur des bouton filtre par defaut */
 	--bkgrnd-color-for-host-and-popular: #D9D9D9; /* couleur de fond grise pour les photos */
 	--bkgrnd-color-not-obtain-stars-and-info-icon: #D9D9D9; /* couleur de fond grise des étoiles non obtenu et l'icone d'information */
-	--text-card-and-search-color: #F2F2F2; /* couleur blanche pour les cars et la partie recherche */
+	--text-card-and-search-color: #F2F2F2; /* couleur blanche pour les cards et la partie recherche */
 }
 
 /*--- Normalisation des parametres des navigateurs (reset) ---*/

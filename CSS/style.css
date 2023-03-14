@@ -18,6 +18,7 @@
 	padding: 0;
 }
 
+/*--- Initialisation des parametres par defaut du site ---*/
 body { 
 	max-width: 1400px;
 	margin: 0 auto;
@@ -50,7 +51,6 @@ header {
 	justify-content: space-between;
 	height: 120px;
 	align-items: center;
-
 }
 
 .logo img{
@@ -298,7 +298,6 @@ a {
 	min-width: 137px;
 	height: 134px;
 	border-radius: 16px 0 0 16px;
-
 }
 
 /*---------------- Partie activité ----------------------*/
@@ -371,7 +370,6 @@ footer  {
 @media screen and (max-width: 992px) {
   	header, main, footer {
     	margin: 0 62px;
-
   	}
 
 	.conteneur-hotel {

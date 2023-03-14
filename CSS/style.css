@@ -415,7 +415,7 @@ footer  {
 }
 
 /*------ Media query hide search magnifying glass Tablette & Desktop ------*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   	.recherche-form button .fa-magnifying-glass {
     	display: none;
 	}

@@ -107,9 +107,9 @@ a {
 	width: 50px;
 }
 
-.conteneur-icone-info .fa-location-dot {
+/*.conteneur-icone-info .fa-location-dot {
   	width: 25px;
-}
+}*/
 
 .recherche {
   	margin-bottom: 20px;
@@ -198,12 +198,15 @@ a {
 }
 
 .info .iconeinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	border: 2px solid var(--bkgrnd-color-not-obtain-stars-and-info-icon);
 	border-radius: 50%;
 	background-color:#fff;
 	width: 16px;
 	height: 16px;
-	padding: 4px;
+	padding: 12px;
 }
 
 /*---- hotel ----*/
@@ -229,6 +232,10 @@ a {
 	border-radius: 20px;
 	background-color: #fff;
 	padding: 5px;
+}
+
+.card .heber_description {
+    padding: 10px 15px;
 }
 
 .card .description {
